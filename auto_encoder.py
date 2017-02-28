@@ -49,7 +49,7 @@ class AdditvieGaussianNoiseAutoencoder(object):
     	return cost
 
     def calc_total_cost(self, X):
-    	return self.sess.run(self.const, feed_dict = {self.x: X, self.scale: self.training_scale})
+    	return self.sess.run(self.cost, feed_dict = {self.x: X, self.scale: self.training_scale})
 
     def transform(self, X):
     	return self.sess.run(self.hidden, feed_dict = {self.x: X, self.scale: self.training_scale})
