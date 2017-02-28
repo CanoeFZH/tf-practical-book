@@ -81,7 +81,7 @@ def get_random_block_from_data(data, batch_size):
     start_index = np.random.randint(0, len(data) - batch_size)
     return data[start_index: (start_index + batch_size)]
 
-X_train, X_text = standard_scale(mnist.train.images, mnist.test.images)
+X_train, X_test = standard_scale(mnist.train.images, mnist.test.images)
 n_samples = int(mnist.train.num_examples)
 traning_epochs = 20
 batch_size = 128
